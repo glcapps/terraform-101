@@ -6,6 +6,6 @@ terraform {
         }
     }
 }
-resource "docker_container" "rbitrarylabel" {
+resource "docker_container" "arbitrarylabel" {
 
 }
