@@ -54,7 +54,7 @@ resource "docker_container" "arbitrarylabel" {
     privileged        = false
     publish_all_ports = false
     read_only         = false
-    restart           = "no"
+    restart           = "always"
     rm                = false
     security_opts     = []
     shm_size          = 64
@@ -64,7 +64,6 @@ resource "docker_container" "arbitrarylabel" {
     tmpfs             = {}
     tty               = false
     user              = "mssql"
-
     ports {
         external = 1433
         internal = 1433
@@ -72,4 +71,10 @@ resource "docker_container" "arbitrarylabel" {
         protocol = "tcp"
     }
 }
+
+
+
+
+
+
 
