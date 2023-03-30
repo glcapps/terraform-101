@@ -22,13 +22,14 @@ resource "docker_container" "arbitrarylabel" {
     entrypoint        = [
         "/opt/mssql/bin/permissions_check.sh",
     ]
-    # exit_code         = 137
+    # gateway           = "172.17.0.1"
     group_add         = []
-    hostname          = "538ebf573fff"
-    id                = "538ebf573fff2b57c9558864f6361bfed89fb8e47104235ca0bb13e15c8469f8"
+    hostname          = "d1360f5afa50"
+    # id                = "d1360f5afa508cde4ca7bbf1be1a1a32a6c42359014fd17c82b0e11fd818122d"
     image             = "sha256:880c02b9631c5813e3e5d0ed8cb0aaca6db059311d41d199dd0409b7850410ef"
     init              = false
-    ip_prefix_length  = 0
+    # ip_address        = "172.17.0.2"
+    # ip_prefix_length  = 16
     ipc_mode          = "private"
     links             = []
     log_driver        = "json-file"
@@ -37,6 +38,18 @@ resource "docker_container" "arbitrarylabel" {
     memory            = 0
     memory_swap       = 0
     name              = "sql"
+    /*network_data      = [
+        {
+            gateway                   = "172.17.0.1"
+            global_ipv6_address       = ""
+            global_ipv6_prefix_length = 0
+            ip_address                = "172.17.0.2"
+            ip_prefix_length          = 16
+            ipv6_gateway              = ""
+            network_name              = "bridge"
+        },
+    ]
+    */
     network_mode      = "default"
     privileged        = false
     publish_all_ports = false
@@ -51,4 +64,12 @@ resource "docker_container" "arbitrarylabel" {
     tmpfs             = {}
     tty               = false
     user              = "mssql"
+
+    ports {
+        external = 1433
+        internal = 1433
+        ip       = "0.0.0.0"
+        protocol = "tcp"
+    }
 }
+
