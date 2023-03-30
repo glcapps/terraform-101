@@ -7,3 +7,7 @@ WorkingDirectory/.terraform/providers/registry.terraform.io/kreuzwerker/docker/2
 WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/2.17.0/windows_amd64/CHANGELOG.md
 WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/2.17.0/windows_amd64/LICENSE
 WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/2.17.0/windows_amd64/README.md
+WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/windows_amd64/CHANGELOG.md
+WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/windows_amd64/LICENSE
+WorkingDirectory/LocalDockerExample/.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/windows_amd64/README.md
+WorkingDirectory/LocalDockerExample/terraform.tfstate
