@@ -62,7 +62,7 @@ spec:
     solvers:
     - dns01:
         cloudflare:
-          email: your-mail-address
+          email: ${var.CloudFlareEmailAddress}
           apiKeySecretRef:
             name: cloudflare-api-key-secret
             key: api-key
