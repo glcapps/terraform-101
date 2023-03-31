@@ -1,5 +1,6 @@
 provider "aws" {
-  version = "= 3.8.0"
+  version = "= 3.46.0"
+  // Jun 17, 2021 version used to be the one that the original probably was using
   region                      = "ap-southeast-2"
   access_key                  = "fake"
   secret_key                  = "fake"
@@ -60,7 +61,7 @@ resource "aws_kinesis_stream" "eaten_hot_dogs_stream" {
     "OutgoingBytes",
   ]
 }
-
+/*
 // LAMBDA FUNCTIONS
 resource "aws_lambda_function" "dog_catcher_lambda" {
   function_name = "dogCatcher"
@@ -119,3 +120,4 @@ resource "aws_lambda_event_source_mapping" "hot_dog_despatcher_trigger" {
   enabled = true
   maximum_record_age_in_seconds = 604800
 }
+*/

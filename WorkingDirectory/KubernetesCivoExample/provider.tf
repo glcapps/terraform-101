@@ -43,7 +43,7 @@ provider "civo" {
     
     # TODO: (optional) change region to your desired datacenter location
     # ---
-    # region = "FRA1"
+    region = "NYC1"
 }
 
 provider "helm" {

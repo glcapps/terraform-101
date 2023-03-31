@@ -100,7 +100,7 @@ spec:
     name: cloudflare-prod
     kind: ClusterIssuer
   dnsNames:
-  - 'your-domain'   
+  - '${var.CloudFlareDomain}'   
     YAML
 }
 
@@ -117,7 +117,7 @@ resource "kubernetes_ingress_v1" "nginx1" {
     spec {
         rule {
 
-            host = "your-domain"
+            host = data.external.env.result["CloudFlareDomain"]
 
             http {
 
@@ -139,14 +139,14 @@ resource "kubernetes_ingress_v1" "nginx1" {
 
         tls {
           secret_name = "nginx1"
-          hosts = ["your-domain"]
+          hosts = [data.external.env.result["CloudFlareDomain"]]
         }
     }
 }
 
 resource "cloudflare_record" "clcreative-main-cluster" {
-    zone_id = "your-zone-id"
-    name = "your-domain"
+    zone_id = data.external.env.result["CloudFlareZoneId"]
+    name = data.external.env.result["CloudFlareDomain"]
     value =  data.civo_loadbalancer.traefik_lb.public_ip
     type = "A"
     proxied = false

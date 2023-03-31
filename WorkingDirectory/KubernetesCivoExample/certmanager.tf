@@ -55,7 +55,7 @@ metadata:
   name: cloudflare-prod
 spec:
   acme:
-    email: your-mail-address
+    email: ${var.CloudFlareEmailAddress}
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cloudflare-prod-account-key
