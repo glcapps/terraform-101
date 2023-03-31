@@ -19,3 +19,5 @@ WorkingDirectory/LocalDockerExample/tfplan
 WorkingDirectory/LocalDockerExample/terraform.tfstate.backup
 WorkingDirectory/LocalDockerExample/terraform.tfstate.backup
 WorkingDirectory/LocalstackAwsExample/terraform.tfstate
+WorkingDirectory/LocalstackAwsExample/terraform.tfstate.backup
+WorkingDirectory/LocalstackAwsExample/terraform.tfstate.backup
