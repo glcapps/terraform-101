@@ -17,12 +17,17 @@ resource "civo_kubernetes_cluster" "k8s_demo_1" {
     num_target_nodes = 2
     target_nodes_size = element(data.civo_size.xsmall.sizes, 0).name
     firewall_id = civo_firewall.fw_demo_1.id
+    pools {
+        label = "front-end" // Optional
+        size = element(data.civo_size.xsmall.sizes, 0).name
+        node_count = 2
+    }
 }
 
 resource "civo_firewall" "fw_demo_1" {
     name = "fw_demo_1"
 
-    create_default_rules = false
+    create_default_rules = true
 }
 
 resource "civo_firewall_rule" "kubernetes_http" {

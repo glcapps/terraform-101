@@ -38,6 +38,14 @@ variable "cloudflare_api_key" {
     type = string
 }
 
+variable "cloudflare_domain" {
+    type = string
+}
+
+variable "cloudflare_zone_id" {
+    type = string
+}
+
 provider "civo" {
     token = var.civo_token
     

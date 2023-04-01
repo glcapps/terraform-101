@@ -55,14 +55,14 @@ metadata:
   name: cloudflare-prod
 spec:
   acme:
-    email: ${var.CloudFlareEmailAddress}
+    email: ${var.cloudflare_email}
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cloudflare-prod-account-key
     solvers:
     - dns01:
         cloudflare:
-          email: ${var.CloudFlareEmailAddress}
+          email: ${var.cloudflare_email}
           apiKeySecretRef:
             name: cloudflare-api-key-secret
             key: api-key
