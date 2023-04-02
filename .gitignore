@@ -32,3 +32,8 @@ WorkingDirectory/KubernetesCivoExample/.terraform/providers/registry.terraform.i
 WorkingDirectory/KubernetesCivoExample/.terraform/providers/registry.terraform.io/gavinbunney/kubectl/1.13.1/windows_amd64/README.md
 WorkingDirectory/KubernetesCivoExample/terraform.tfstate
 WorkingDirectory/KubernetesCivoExample/terraform.tfstate.backup
+WorkingDirectory/LocalDockerExample/terraform.tfstate.backup
+WorkingDirectory/LocalDockerExample/terraform.tfstate.backup
+WorkingDirectory/LocalDockerExample/tfplan
+WorkingDirectory/LocalDockerExample/terraform.tfstate.backup
+WorkingDirectory/LocalDockerExample/tfplan

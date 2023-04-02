@@ -24,8 +24,8 @@ resource "docker_container" "arbitrarylabel" {
     ]
     # gateway           = "172.17.0.1"
     group_add         = []
-    hostname          = "d1360f5afa50"
-    # id                = "d1360f5afa508cde4ca7bbf1be1a1a32a6c42359014fd17c82b0e11fd818122d"
+    hostname          = "d75aed591bbe"
+    # id                = "d75aed591bbe354fd1187edeacfbf54b9547878336f2bcbb5dac5f7d6cad6319"
     image             = "sha256:880c02b9631c5813e3e5d0ed8cb0aaca6db059311d41d199dd0409b7850410ef"
     init              = false
     # ip_address        = "172.17.0.2"
@@ -54,7 +54,7 @@ resource "docker_container" "arbitrarylabel" {
     privileged        = false
     publish_all_ports = false
     read_only         = false
-    restart           = "always"
+    restart           = "no"
     rm                = false
     security_opts     = []
     shm_size          = 64
@@ -64,6 +64,11 @@ resource "docker_container" "arbitrarylabel" {
     tmpfs             = {}
     tty               = false
     user              = "mssql"
+
+    upload {
+        content = ""
+        file = "/var/sample.txt"
+    }
     ports {
         external = 1433
         internal = 1433
@@ -71,10 +76,5 @@ resource "docker_container" "arbitrarylabel" {
         protocol = "tcp"
     }
 }
-
-
-
-
-
 
 
